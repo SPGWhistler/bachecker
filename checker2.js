@@ -47,22 +47,15 @@ casper.then(function() {
 	*/
 	//this.captureSelector('7.png', ':content');
 	//Open Bill Account
-	//this.click('#contentWrap>div.center>table:last-of-type>tbody a:first-of-type');
-	this.evaluate(function(){
-		$('#contentWrap>div.right>ul>li>a:contains("Download account activity")').click();
-	});
+	this.click('#contentWrap>div.center>table:last-of-type>tbody a:first-of-type');
+	//this.evaluate(function(){
+	//	$('#contentWrap>div.right>ul>li>a:contains("Download account activity")').click();
+	//});
 });
 
-//https://secure.ally.com/allyWebClient/downloadAccountActivity.do?5ecff2fae040ea84dbba053bc42218b8acaeed9bb53b2d6d93e7356e41e5ec775d14c0d8f68a72858774692e62b9e0ba19c4b2bc8a9e56f4d6b457810ad77373=96b14e2327a402155f39ad8824986a3a
-casper.waitForUrl(/.*downloadaccountactivity.*/i, function () {
-	this.capture('bill.png');
-});
-
-/*
 casper.then(function() {
 	this.capture('bill.png');
 });
-*/
 
 /*
 casper.then(function() {
